@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  # spot-env is a folder name 
+  spot-env:
+    image: "spot_env:1.0"
+    # will build ./spot-env/Dockerfile
+    build: ./spot-env
+    ports:
+        - "8001:8888"
+    volumes:
+        - ~/spot-env-shared-volume:/home/robotics/spot_server
+  
+  robotics-sw-env:
+    image: "motion_synth_env:1.0"
+    # will build ./robotics-sw-env/Dockerfile
+    build: ./robotics-sw-env
+    ports:
+        - "8002:8888"
+    volumes:
+        - ~/spot-env-shared-volume:/home/spot_server

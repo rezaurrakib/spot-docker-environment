@@ -1,0 +1,15 @@
+gr1py
+numpy
+numpy-stl
+matplotlib
+opencv-python==4.2.0.34
+transforms3d
+Pillow
+pandas
+scipy
+xlrd
+scikit-image
+mayavi
+PyQt5==5.14
+ipython
+#apt-get install python3-graph-tool
